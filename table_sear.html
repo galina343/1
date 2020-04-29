@@ -1,0 +1,2069 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="t_s_style.css">  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	 <!-- Подключаем jQuery к странице (в блоке <head> или перед закрывающимся </body>): -->
+    <script type="text/javascript" src="jquery-1.2.6.js"></script>
+    <script type="text/javascript" src="t_s_script.js"></script>
+  </head>
+  <body> 
+  
+<br>  
+<p>В сводной таблице собраны основные характеристики всех редакций Windows 7: Windows 7 Starter, Windows 7 Home Basic, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, Windows 7 Ultimate.</p>
+<br>
+<button  onclick="addStyle2()">Выделить заголовки таблицы зеленым</button><br><br>
+<button  onclick="addStyle3()">Выделить  столбец "Редакции" желтым</button><br><br>
+<p>Для сортировки таблицы нажмите на заголовок выбранного стобца.</p>
+
+<div class="form-group"> 
+   <input type="text" class="form-control pull-right" id="search_3" placeholder="Поиск по таблице"> 
+   </div>
+   
+  <table class="table_sort" id="mytable_3" cellspacing="0" style="width: 100%;"> 
+
+    <thead>
+        <tr role="row">
+			<th id="s1" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Редакции</strong></span></th>
+			<th id="s2"class="wysiwyg-text-align-center" style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Начальная</strong></span></th>
+			<th id="s3"class="wysiwyg-text-align-center" style="width: 109px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Домашняя базовая</strong></span></th>
+			<th id="s4" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Домашняя расширенная</strong></span></th>
+			<th id="s5" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Профессиональная</strong></span></th>
+			<th id="s6" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Максимальная</strong></span></th>
+			<th id="s7" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Корпоративная</strong></span></th>
+        </tr>
+    </thead>
+
+<tbody>
+
+<tr>
+<td id="d1" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Способ распространения</strong></span></th>
+<td>OEM-лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Розница, OEM-лицензии, корпоративные лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Корпоративные лицензии</td>
+</tr>
+<tr>
+<td id="d2" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Максимальный объем физической памяти (32 бит)</strong></span></th>
+<td>2ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+</tr>
+<tr>
+<td id="d3" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Максимальный объем физической памяти (64-бит)</strong></span></th>
+<td>Нет</td>
+<td>8ГБ</td>
+<td>16ГБ</td>
+<td>192ГБ</td>
+<td>192ГБ</td>
+<td>192ГБ</td>
+</tr>
+<tr>
+<td id="d4" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>64 - битная версия </strong></span></th>
+<td>Нет</td>
+<td>Да, только в OEM-версии</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d5" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Количество физических процессоров</strong></span></th>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td id="d6" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Центр восстановления Windows</strong></span></th>
+<td>Нет поддержки домена</td>
+<td>Нет поддержки домена</td>
+<td>Нет поддержки домена</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d7" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Домашняя группа</strong></span></th>
+<td>Только присоединение</td>
+<td>Только присоединение</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d8" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Удаленный рабочий стол</strong></span></th>
+<td>Только клиент</td>
+<td>Только клиент</td>
+<td>Только клиент</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d9" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Несколько мониторов</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d10" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Быстрое переключение пользователей</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d11" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Aero</strong></span></th>
+<td>Нет</td>
+<td>Базовая тема оформления</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d12" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Смена фонового изображения рабочего стола</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d13" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Диспетчер окон рабочего стола</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d14" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Центр мобильности</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d15" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Поддержка мультитач</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d16" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Онлайн игры</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да, отключено</td>
+<td>Да</td>
+<td>Да, отключено</td>
+</tr>
+<tr>
+<td id="d17" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Media Center</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d18" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows DVD Maker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d19" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Родительский контроль</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d20" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Defender</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d21" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Firewall</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d22" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>EFS</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d23" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Печать</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d24" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Режим презентации</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d25" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Присоединение к домену Windows </strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d26" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows XP Mode</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d27" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Политики ограниченного использования программ</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d28" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>AppLocker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d29" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BitLocker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d30" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BitLocker To Go</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d31" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BranchCache</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d32" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>DirectAccess</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d33" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Подсистема для UNIX-приложений</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d34" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Пакет мультиязычного пользовательского интерфейса</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d35" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Создание и подключение VHD</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d36" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Загрузка с VHD</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d37" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Запуск системных оснасток</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+</tbody>
+</table> 
+  
+  
+  
+  
+  
+<p>На этой странице представлена сводная таблица актуальных версий операционной системы KeeneticOS (NDMS v2) для интернет-центров серии Keenetic.<br /> Модели отсортированы по алфавиту.</p>
+<p>KeeneticOS — модульная операционная система интернет-центра с набором установленных компонентов. Иначе KeeneticOS называют системным встроенным программным обеспечением (ПО).<br /> Релиз — официальный стабильный выпуск операционной системы.<br /> Предварительная версия (Бета) — официальный выпуск операционной системы, прошедший внутреннее тестирование и находящийся на этапе окончательной отладки.</p>
+<p>TIP: <strong>Статусы:<br /></strong><br /> <strong>Active</strong> — ведется разработка новых версий;<br /> <strong>EoD</strong> — <em>End of Development</em>, новые возможности для этой модели не добавляются, обновление операционной системы возможно только для исправления критических ошибок;<br /> <strong>EoL</strong> — <em>End of Life</em>, прекращение разработки операционной системы для этой модели, последняя релизная версия.</p>
+<br>
+<p>Для сортировки таблицы нажмите на заголовок выбранного стобца.</p> 
+
+
+<button  onclick="addStyle1()">Выделить заголовки таблицы красным</button><br><br>
+
+		
+
+ 
+ 
+
+<div class="form-group"> 
+   <input type="text" class="form-control pull-right" id="search" placeholder="Поиск по таблице"> 
+   </div>
+   
+  <table class="table_sort" id="mytable" cellspacing="0" style="width: 100%;"> 
+     <thead>
+        <tr role="row">
+			<th id="st1" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Модель</strong></span></th>
+			<th id="st2"class="wysiwyg-text-align-center" style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Релиз</strong></span></th>
+			<th id="st3"class="wysiwyg-text-align-center" style="width: 109px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Предварительная версия</strong></span></th>
+			<th id="st4" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Статус </strong></span></th>
+       
+		
+        </tr>
+    </thead>
+	
+	<tbody>
+
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic 4G (KN-1210)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/115005702285">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic 4G (KN-1211)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360011556900" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Air (KN-1610)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000154049">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Air (KN-1611)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="/hc/ru/articles/360011658759" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic City (KN-1510)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000154089">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic City (KN-1511)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360011659739" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Extra (KN-1710)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000154109">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Extra (KN-1711)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="/hc/ru/articles/360011553620" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Giga (KN-1010)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/115005702305">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Lite (KN-1310)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000142065">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Lite (KN-1311)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360011662719" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Omni (KN-1410)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000153989" target="_self">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Speedster (KN-3010)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="/hc/ru/articles/360011096339" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Start (KN-1110)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/115005702265">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Start (KN-1111)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360011662879" target="_self">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Ultra (KN-1810)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360000154549">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic DSL (KN-2010)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360001395480">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic DUO (KN-2110)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360001395500">3.3.12</a> (25.02.2020)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Keenetic Viva (KN-1910)</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/360001759419">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 139px; height: 21px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic</span></td>
+<td style="height: 21px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213947749">2.04(BFW.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 21px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 21px; width: 79.5px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213970989">2.06(AAFG.0)C3</a> (19.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic III</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213983209">2.08(AAUU.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic 4G</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213962429">2.04(BW0.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 63px;">
+<td style="width: 139px; height: 63px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic 4G Rev.B</span></td>
+<td style="height: 63px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213962429">2.04(AABV.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 63px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 63px; width: 79.5px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic 4G II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213970889">2.05(AAKW.0)C4</a> (05.05.2016)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213970889">2.05(AAKW.0)C7</a> <br />(19.10.2017)</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic 4G III</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214479105">2.08(AAUR.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 63px;">
+<td style="width: 139px; height: 63px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic 4G III Rev.B</span></td>
+<td style="height: 63px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214479105" target="_self">2.15.C.6.0-1</a> (19.09.2019)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 63px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 63px; width: 79.5px;"><span class="wysiwyg-font-size-small">EoD</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Air</span></td>
+<td style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/115000130025">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 22px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic DSL</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214480165">2.05(AAGK.0)C7</a> (19.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Extra</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213986869">2.08(AANS.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Extra II</span></td>
+<td style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/115000129945">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 22px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Giga</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214470745">2.04(USD.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Giga II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213983849">2.06(AAFS.0)C3</a> (19.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Giga III</span></td>
+<td style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214495285">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 22px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+</td>
+<td style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Lite</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213960069">2.04(BWN.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 63px;">
+<td style="width: 139px; height: 63px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Lite Rev.B</span></td>
+<td style="height: 63px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213960069">2.04(AABL.2)C7</a> (06.07.2015)</span></td>
+<td class="wysiwyg-text-align-center" style="height: 63px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 63px; width: 79.5px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Lite II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214472665">2.07(AAKT.1)C4</a> (01.02.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214472665">2.07(AAKT.0)C5</a> <br />(19.10.2017)</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Lite III</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213982529">2.08(AAUQ.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 63px;">
+<td style="width: 139px; height: 63px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Lite III Rev.B</span></td>
+<td style="height: 63px; width: 108px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213982529" target="_self">2.15.C.6.0-1</a> (19.09.2019)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="height: 63px; width: 109px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="height: 63px; width: 79.5px;"><span class="wysiwyg-font-size-small">EoD</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic LTE</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214481105">2.08(AATF.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Omni</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213971409">2.07(AAKU.1)C4</a> (01.02.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213971409">2.07(AAKU.0)C5</a> <br />(19.10.2017)</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Omni II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214479925">2.08(AAUS.8)C2</a> (22.02.2018)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Start</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214472865">2.05(AAKV.0)C4</a> (05.05.2016)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214472865">2.05(AAKV.0)C7</a> <br />(19.10.2017)</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Start II</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214478925" target="_self">2.15.C.6.0-1</a> (19.09.2019)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoD</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Ultra</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213974809">2.06(AAGJ.0)C3</a> (19.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Ultra II</span></td>
+<td style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214496025">3.3.12</a> (25.02.2020)<br /></span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 22px;">
+<p><span class="wysiwyg-font-size-small">—</span></p>
+<span></span></td>
+<td style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small">Active</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic Viva</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/214483685">2.08(AANT.4)C2</a> (17.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 139px; height: 44px;"><span class="wysiwyg-font-size-small">Zyxel Keenetic VOX</span></td>
+<td style="width: 108px; height: 44px;"><span class="wysiwyg-font-size-small"><a href="https://help.keenetic.com/hc/ru/articles/213984329">2.05(AAGN.0)C7</a> (19.10.2017)</span></td>
+<td class="wysiwyg-text-align-center" style="width: 109px; height: 44px;"><span class="wysiwyg-font-size-small">—</span></td>
+<td style="width: 79.5px; height: 44px;"><span class="wysiwyg-font-size-small">EoL</span></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<br>
+<br>
+
+ 
+
+
+<br>
+<br>
+<br>
+
+ <body>
+ 
+<p>ТОП -200 НЕПРАВИЛЬНЫХ ГЛАГОЛОВ<br /> 
+   
+ 
+<div class="form-group"> 
+   <input type="text" class="form-control pull-right" id="search_2" placeholder="Поиск по таблице"> 
+   </div>
+   
+  <table class="table_sort" id="mytable_2" cellspacing="0" style="width: 100%;"> 
+<thead>
+<tr>
+<td>1-я форма<br />
+(Present)</td>
+<td>2-я форма<br />
+(Past)</td>
+<td>3-я форма<br />
+(Past Participle)</td>
+<td>Перевод</td>
+</tr>
+ </thead>
+ <tbody>
+<tr>
+<td style="text-align: left; vertical-align: top;">abide [əˈbʌɪd]</td>
+<td style="text-align: left; vertical-align: top;">abided [əˈbʌɪdɪd],<br />
+abode [əˈbəʊd]</td>
+<td style="text-align: left; vertical-align: top;">abided<br />
+[əˈbʌɪdɪd]</td>
+<td style="text-align: left; vertical-align: top;">обитать, пребывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">arise [əˈraɪz]</td>
+<td style="text-align: left; vertical-align: top;">arose [əˈroʊz]</td>
+<td style="text-align: left; vertical-align: top;">arisen [əˈrɪzn]</td>
+<td style="text-align: left; vertical-align: top;">возникать, появляться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">awake [əˈwaɪk]</td>
+<td style="text-align: left; vertical-align: top;">awoke [əˈwoʊk]</td>
+<td style="text-align: left; vertical-align: top;">awoken [əˈwoʊkn]</td>
+<td style="text-align: left; vertical-align: top;">будить, просыпаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">be [bi:]</td>
+<td style="text-align: left; vertical-align: top;">was, were<br />
+[wɒz], [wɜ:]</td>
+<td style="text-align: left; vertical-align: top;">been [bi:n]</td>
+<td style="text-align: left; vertical-align: top;">быть, находиться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bear [bɛə]</td>
+<td style="text-align: left; vertical-align: top;">bore [bɔ:]</td>
+<td style="text-align: left; vertical-align: top;">borne [bɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">носить, выносить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">beat [bi:t]</td>
+<td style="text-align: left; vertical-align: top;">beat [bi:t]</td>
+<td style="text-align: left; vertical-align: top;">beaten [bi:tn]</td>
+<td style="text-align: left; vertical-align: top;">бить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">become [bɪˈkʌm]</td>
+<td style="text-align: left; vertical-align: top;">became [bɪˈkeɪm]</td>
+<td style="text-align: left; vertical-align: top;">become [bɪˈkʌm]</td>
+<td style="text-align: left; vertical-align: top;">становиться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">begin [bɪˈgɪn]</td>
+<td style="text-align: left; vertical-align: top;">began [bɪˈgæn]</td>
+<td style="text-align: left; vertical-align: top;">begun [bɪˈgʌn]</td>
+<td style="text-align: left; vertical-align: top;">начинать(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">behold [bɪˈhəʊld]</td>
+<td style="text-align: left; vertical-align: top;">beheld [bɪˈhɛld]</td>
+<td style="text-align: left; vertical-align: top;">beheld [bɪˈhɛld]</td>
+<td style="text-align: left; vertical-align: top;">видеть, замечать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bend [bɛnd]</td>
+<td style="text-align: left; vertical-align: top;">bent [bɛnt]</td>
+<td style="text-align: left; vertical-align: top;">bent [bɛnt]</td>
+<td style="text-align: left; vertical-align: top;">гнуть(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bereave [bɪˈriːv]</td>
+<td style="text-align: left; vertical-align: top;">bereft/bereaved<br />
+[bɪˈrɛft/bɪˈriːvd]</td>
+<td style="text-align: left; vertical-align: top;">bereft/bereaved<br />
+[bɪˈrɛft/bɪˈriːvd]</td>
+<td style="text-align: left; vertical-align: top;">лишать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">beseech [bɪˈsiːtʃ]</td>
+<td style="text-align: left; vertical-align: top;">besought/beseeched<br />
+[bɪˈsɔːt/bɪˈsiːtʃt]</td>
+<td style="text-align: left; vertical-align: top;">besought/beseeched<br />
+[bɪˈsɔːt/bɪˈsiːtʃt]</td>
+<td style="text-align: left; vertical-align: top;">умолять, упрашивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">beset [bɪˈsɛt]</td>
+<td style="text-align: left; vertical-align: top;">beset [bɪˈsɛt]</td>
+<td style="text-align: left; vertical-align: top;">beset [bɪˈsɛt]</td>
+<td style="text-align: left; vertical-align: top;">осаждать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bet [bɛt]</td>
+<td style="text-align: left; vertical-align: top;">bet [bɛt]</td>
+<td style="text-align: left; vertical-align: top;">bet [bɛt]</td>
+<td style="text-align: left; vertical-align: top;">держать пари</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bid [bɪd]</td>
+<td style="text-align: left; vertical-align: top;">bid/bade [bɪd/beɪd]</td>
+<td style="text-align: left; vertical-align: top;">bidden [bɪdn]</td>
+<td style="text-align: left; vertical-align: top;">велеть, просить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bid [bɪd]</td>
+<td style="text-align: left; vertical-align: top;">bid [bɪd]</td>
+<td style="text-align: left; vertical-align: top;">bid [bɪd]</td>
+<td style="text-align: left; vertical-align: top;">предлагать цену (на аукционе)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bind [baɪnd]</td>
+<td style="text-align: left; vertical-align: top;">bound [baʊnd]</td>
+<td style="text-align: left; vertical-align: top;">bound [baʊnd]</td>
+<td style="text-align: left; vertical-align: top;">связывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bite [bʌɪt]</td>
+<td style="text-align: left; vertical-align: top;">bit [bɪt]</td>
+<td style="text-align: left; vertical-align: top;">bitten [bɪtn]</td>
+<td style="text-align: left; vertical-align: top;">кусать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bleed [bli:d]</td>
+<td style="text-align: left; vertical-align: top;">bled [blɛd]</td>
+<td style="text-align: left; vertical-align: top;">bled [blɛd]</td>
+<td style="text-align: left; vertical-align: top;">кровоточить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">blow [bloʊ]</td>
+<td style="text-align: left; vertical-align: top;">blew [blu:]</td>
+<td style="text-align: left; vertical-align: top;">blown [blu:]</td>
+<td style="text-align: left; vertical-align: top;">дуть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">break [breɪk]</td>
+<td style="text-align: left; vertical-align: top;">broke [broʊk]</td>
+<td style="text-align: left; vertical-align: top;">broken [broʊkən]</td>
+<td style="text-align: left; vertical-align: top;">ломать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">breed [bri:d]</td>
+<td style="text-align: left; vertical-align: top;">bred [brɛd]</td>
+<td style="text-align: left; vertical-align: top;">bred [brɛd]</td>
+<td style="text-align: left; vertical-align: top;">разводить (животных)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bring [brɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">brought [brɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">brought [brɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">принести</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">build [bɪld]</td>
+<td style="text-align: left; vertical-align: top;">built [bɪlt]</td>
+<td style="text-align: left; vertical-align: top;">built [bɪlt]</td>
+<td style="text-align: left; vertical-align: top;">строить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">burn [bɜ:n]</td>
+<td style="text-align: left; vertical-align: top;">burned/burnt<br />
+[bɜ:nd/bɜ:nt]</td>
+<td style="text-align: left; vertical-align: top;">burned/burnt<br />
+[bɜ:nd/bɜ:nt]</td>
+<td style="text-align: left; vertical-align: top;">жечь, гореть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">burst [bɜ:st]</td>
+<td style="text-align: left; vertical-align: top;">burst [bɜ:st]</td>
+<td style="text-align: left; vertical-align: top;">burst [bɜ:st]</td>
+<td style="text-align: left; vertical-align: top;">взорваться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">bust [bʌst]</td>
+<td style="text-align: left; vertical-align: top;">busted/bust<br />
+[bʌstɪd/bʌst]</td>
+<td style="text-align: left; vertical-align: top;">busted/bust<br />
+[bʌstɪd/bʌst]</td>
+<td style="text-align: left; vertical-align: top;">разорить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">buy [baɪ]</td>
+<td style="text-align: left; vertical-align: top;">bought [bɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">bought [bɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">купить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">cast [kɑ:st]</td>
+<td style="text-align: left; vertical-align: top;">cast [kɑ:st]</td>
+<td style="text-align: left; vertical-align: top;">cast [kɑ:st]</td>
+<td style="text-align: left; vertical-align: top;">бросать, кидать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">catch [kætʃ]</td>
+<td style="text-align: left; vertical-align: top;">caught [kɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">caught [kɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">ловить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">choose [tʃu:z]</td>
+<td style="text-align: left; vertical-align: top;">chose [tʃoʊz]</td>
+<td style="text-align: left; vertical-align: top;">chosen [tʃoʊzn]</td>
+<td style="text-align: left; vertical-align: top;">выбирать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">cleave [kli:v]</td>
+<td style="text-align: left; vertical-align: top;">cleft [klɛft]</td>
+<td style="text-align: left; vertical-align: top;">cleft [klɛft]</td>
+<td style="text-align: left; vertical-align: top;">рассечь</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">cling [klɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">clung [klʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">clung [klʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">цеплять(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">clothe [kloʊð]</td>
+<td style="text-align: left; vertical-align: top;">clothed/clad<br />
+[kloʊðd/klæd]</td>
+<td style="text-align: left; vertical-align: top;">clothed/clad<br />
+[kloʊðd/klæd]</td>
+<td style="text-align: left; vertical-align: top;">одеть(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">come [kʌm]</td>
+<td style="text-align: left; vertical-align: top;">came [keɪm]</td>
+<td style="text-align: left; vertical-align: top;">come [keɪm]</td>
+<td style="text-align: left; vertical-align: top;">приходить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">cost [kɒst]</td>
+<td style="text-align: left; vertical-align: top;">cost [kɒst]</td>
+<td style="text-align: left; vertical-align: top;">cost [kɒst]</td>
+<td style="text-align: left; vertical-align: top;">стоить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">creep [kri:p]</td>
+<td style="text-align: left; vertical-align: top;">crept [krɛpt]</td>
+<td style="text-align: left; vertical-align: top;">crept [krɛpt]</td>
+<td style="text-align: left; vertical-align: top;">ползать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">cut [kʌt]</td>
+<td style="text-align: left; vertical-align: top;">cut [kʌt]</td>
+<td style="text-align: left; vertical-align: top;">cut [kʌt]</td>
+<td style="text-align: left; vertical-align: top;">резать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">deal [di:l]</td>
+<td style="text-align: left; vertical-align: top;">dealt [dɛlt]</td>
+<td style="text-align: left; vertical-align: top;">dealt [dɛlt]</td>
+<td style="text-align: left; vertical-align: top;">торговать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">dig [dɪg]</td>
+<td style="text-align: left; vertical-align: top;">dug [dʌg]</td>
+<td style="text-align: left; vertical-align: top;">dug [dʌg]</td>
+<td style="text-align: left; vertical-align: top;">копать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">disprove [dɪsˈpruːv]</td>
+<td style="text-align: left; vertical-align: top;">disproved [dɪsˈpruːvd]</td>
+<td style="text-align: left; vertical-align: top;">disproved / disproven<br />
+[dɪsˈpruːvd] / [dɪsˈpru:vən]</td>
+<td style="text-align: left; vertical-align: top;">опровергать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">dive [daɪv]</td>
+<td style="text-align: left; vertical-align: top;">dove/dived<br />
+[doʊv/daɪvd]</td>
+<td style="text-align: left; vertical-align: top;">dived [daɪvd]</td>
+<td style="text-align: left; vertical-align: top;">нырять, погружаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">do [du:]</td>
+<td style="text-align: left; vertical-align: top;">did [dɪd]</td>
+<td style="text-align: left; vertical-align: top;">done [dʌn]</td>
+<td style="text-align: left; vertical-align: top;">делать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">draw [drɔ:]</td>
+<td style="text-align: left; vertical-align: top;">drew [dru:]</td>
+<td style="text-align: left; vertical-align: top;">drawn [drɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">рисовать, тащить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">dream [dri:m]</td>
+<td style="text-align: left; vertical-align: top;">dreamed/dreamt<br />
+[dri:md/drɛmt]</td>
+<td style="text-align: left; vertical-align: top;">dreamed/dreamt<br />
+[dri:md/drɛmt]</td>
+<td style="text-align: left; vertical-align: top;">видеть сны, мечтать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">drink [drɪnk]</td>
+<td style="text-align: left; vertical-align: top;">drank [drænk]</td>
+<td style="text-align: left; vertical-align: top;">drunk [drʌnk]</td>
+<td style="text-align: left; vertical-align: top;">пить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">drive [draɪv]</td>
+<td style="text-align: left; vertical-align: top;">drove [droʊv]</td>
+<td style="text-align: left; vertical-align: top;">driven [drɪvn]</td>
+<td style="text-align: left; vertical-align: top;">водить, гнать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">dwell [dwel]</td>
+<td style="text-align: left; vertical-align: top;">dwelt/dwelled<br />
+[dwɛlt/dwɛld]</td>
+<td style="text-align: left; vertical-align: top;">dwelt/dwelled<br />
+[dwɛlt/dwɛld]</td>
+<td style="text-align: left; vertical-align: top;">обитать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">eat [i:t]</td>
+<td style="text-align: left; vertical-align: top;">ate [ɛt]</td>
+<td style="text-align: left; vertical-align: top;">eaten [i:tn]</td>
+<td style="text-align: left; vertical-align: top;">есть (пищу)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">fall [fɔ:l]</td>
+<td style="text-align: left; vertical-align: top;">fell [fɛl]</td>
+<td style="text-align: left; vertical-align: top;">fallen [fɔ:lən]</td>
+<td style="text-align: left; vertical-align: top;">падать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">feed [fi:d]</td>
+<td style="text-align: left; vertical-align: top;">fed [fɛd]</td>
+<td style="text-align: left; vertical-align: top;">fed [fɛd]</td>
+<td style="text-align: left; vertical-align: top;">кормить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">feel [fi:l]</td>
+<td style="text-align: left; vertical-align: top;">felt [fɛlt]</td>
+<td style="text-align: left; vertical-align: top;">felt [fɛlt]</td>
+<td style="text-align: left; vertical-align: top;">чувствовать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">fight [faɪt]</td>
+<td style="text-align: left; vertical-align: top;">fought [fɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">fought [fɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">бороться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">find [faɪnd]</td>
+<td style="text-align: left; vertical-align: top;">found [faʊnd]</td>
+<td style="text-align: left; vertical-align: top;">found [faʊnd]</td>
+<td style="text-align: left; vertical-align: top;">находить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">fit [fɪt]</td>
+<td style="text-align: left; vertical-align: top;">fit/fitted [fɪt]/ [ˈfɪtɪd]</td>
+<td style="text-align: left; vertical-align: top;">fit/fitted [fɪt]/ [ˈfɪtɪd]</td>
+<td style="text-align: left; vertical-align: top;">подходить, подгонять (об одежде)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">flee [fli:]</td>
+<td style="text-align: left; vertical-align: top;">fled [flɛd]</td>
+<td style="text-align: left; vertical-align: top;">fled [flɛd]</td>
+<td style="text-align: left; vertical-align: top;">бежать, спасаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">fling [flɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">flung [flʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">flung [flʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">швырять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">fly [flaɪ]</td>
+<td style="text-align: left; vertical-align: top;">flew [flu:]</td>
+<td style="text-align: left; vertical-align: top;">flown [floʊn]</td>
+<td style="text-align: left; vertical-align: top;">летать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">forbid [fəˈbɪd]</td>
+<td style="text-align: left; vertical-align: top;">forbade [fəˈbeɪd]</td>
+<td style="text-align: left; vertical-align: top;">forbidden [fəbɪdn]</td>
+<td style="text-align: left; vertical-align: top;">запретить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">forgo (forego) [fɔːˈɡəʊ]</td>
+<td style="text-align: left; vertical-align: top;">forewent [fɔːˈwɛnt]</td>
+<td style="text-align: left; vertical-align: top;">foregone [fɔːˈɡɒn]</td>
+<td style="text-align: left; vertical-align: top;">1) предшествовать 2) воздерживаться (от чего-л.)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">foresee [fɔːˈsiː]</td>
+<td style="text-align: left; vertical-align: top;">foresaw [fɔːˈsɔː]</td>
+<td style="text-align: left; vertical-align: top;">foreseen [fɔːˈsiːn]</td>
+<td style="text-align: left; vertical-align: top;">предвидеть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">foretell [fɔːˈtɛl]</td>
+<td style="text-align: left; vertical-align: top;">foretold [fɔːˈtəʊld]</td>
+<td style="text-align: left; vertical-align: top;">foretold [fɔːˈtəʊld]</td>
+<td style="text-align: left; vertical-align: top;">предсказывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">forget [fəˈget]</td>
+<td style="text-align: left; vertical-align: top;">forgot [fəˈgɒt]</td>
+<td style="text-align: left; vertical-align: top;">forgotten [fəˈgɒtn]</td>
+<td style="text-align: left; vertical-align: top;">забыть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">forgive [fəˈgɪv]</td>
+<td style="text-align: left; vertical-align: top;">forgave [fəˈgeɪv]</td>
+<td style="text-align: left; vertical-align: top;">forgiven [fəgɪvn]</td>
+<td style="text-align: left; vertical-align: top;">простить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">forsake [fəˈseɪk]</td>
+<td style="text-align: left; vertical-align: top;">forsook [fəˈsʊk]</td>
+<td style="text-align: left; vertical-align: top;">forsaken [fəˈseɪkn]</td>
+<td style="text-align: left; vertical-align: top;">покидать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">freeze [fri:z]</td>
+<td style="text-align: left; vertical-align: top;">froze [froʊz]</td>
+<td style="text-align: left; vertical-align: top;">frozen [froʊzn]</td>
+<td style="text-align: left; vertical-align: top;">замерзать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">get [get]</td>
+<td style="text-align: left; vertical-align: top;">got [gɒt]</td>
+<td style="text-align: left; vertical-align: top;">gotten/got [gɒtn/gɒt]</td>
+<td style="text-align: left; vertical-align: top;">получать, становиться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">gild [gɪld]</td>
+<td style="text-align: left; vertical-align: top;">gilt [gɪlt]</td>
+<td style="text-align: left; vertical-align: top;">gilt [gɪlt]</td>
+<td style="text-align: left; vertical-align: top;">позолотить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">give [gɪv]</td>
+<td style="text-align: left; vertical-align: top;">gave [geɪv]</td>
+<td style="text-align: left; vertical-align: top;">given [gɪvn]</td>
+<td style="text-align: left; vertical-align: top;">давать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">go [goʊ]</td>
+<td style="text-align: left; vertical-align: top;">went [wɛnt]</td>
+<td style="text-align: left; vertical-align: top;">gone [ɡɒn]</td>
+<td style="text-align: left; vertical-align: top;">идти, ехать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">grind [graɪnd]</td>
+<td style="text-align: left; vertical-align: top;">ground [graʊnd]</td>
+<td style="text-align: left; vertical-align: top;">ground [graʊnd]</td>
+<td style="text-align: left; vertical-align: top;">точить, молоть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">grow [groʊ]</td>
+<td style="text-align: left; vertical-align: top;">grew [gru:]</td>
+<td style="text-align: left; vertical-align: top;">grown [groʊn]</td>
+<td style="text-align: left; vertical-align: top;">расти, выращивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hang [hæŋ]</td>
+<td style="text-align: left; vertical-align: top;">hung [hʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">hung [hʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">висеть, повесить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">have [hæv]</td>
+<td style="text-align: left; vertical-align: top;">had [hæd]</td>
+<td style="text-align: left; vertical-align: top;">had [hæd]</td>
+<td style="text-align: left; vertical-align: top;">иметь</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hear [hɪə]</td>
+<td style="text-align: left; vertical-align: top;">heard [hɜ:d]</td>
+<td style="text-align: left; vertical-align: top;">heard [hɜ:d]</td>
+<td style="text-align: left; vertical-align: top;">слышать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">heave [hi:v]</td>
+<td style="text-align: left; vertical-align: top;">heaved [hi:vd],<br />
+hove [həʊv]</td>
+<td style="text-align: left; vertical-align: top;">heaved [hi:vd] /<br />
+hove [həʊv]</td>
+<td style="text-align: left; vertical-align: top;">поднимать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hew [hju:]</td>
+<td style="text-align: left; vertical-align: top;">hewed [hju:d]</td>
+<td style="text-align: left; vertical-align: top;">hewn [hju:n] /<br />
+hewed [hju:d]</td>
+<td style="text-align: left; vertical-align: top;">рубить, тесать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hide [haɪd]</td>
+<td style="text-align: left; vertical-align: top;">hid [hɪd]</td>
+<td style="text-align: left; vertical-align: top;">hidden [hɪdn]</td>
+<td style="text-align: left; vertical-align: top;">прятать(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hit [hɪt]</td>
+<td style="text-align: left; vertical-align: top;">hit [hɪt]</td>
+<td style="text-align: left; vertical-align: top;">hit [hɪt]</td>
+<td style="text-align: left; vertical-align: top;">ударить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hold [hoʊld]</td>
+<td style="text-align: left; vertical-align: top;">held [hɛld]</td>
+<td style="text-align: left; vertical-align: top;">held [hɛld]</td>
+<td style="text-align: left; vertical-align: top;">держать, проводить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">hurt [hɜ:t]</td>
+<td style="text-align: left; vertical-align: top;">hurt [hɜ:t]</td>
+<td style="text-align: left; vertical-align: top;">hurt [hɜ:t]</td>
+<td style="text-align: left; vertical-align: top;">ранить, обижать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">inlay [ɪnˈleɪ]</td>
+<td style="text-align: left; vertical-align: top;">inlaid [ɪnˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">inlaid [ɪnˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">вкладывать, инкрустировать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">input [ˈɪnpʊt]</td>
+<td style="text-align: left; vertical-align: top;">input [ˈɪnpʊt]</td>
+<td style="text-align: left; vertical-align: top;">input [ˈɪnpʊt]</td>
+<td style="text-align: left; vertical-align: top;">вводить (данные)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">interweave [ɪntəˈwiːv]</td>
+<td style="text-align: left; vertical-align: top;">interwove [ɪntəˈwəʊv]</td>
+<td style="text-align: left; vertical-align: top;">interwoven [ɪntəˈwəʊv(ə)n]</td>
+<td style="text-align: left; vertical-align: top;">сплетать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">keep [ki:p]</td>
+<td style="text-align: left; vertical-align: top;">kept [kɛpt]</td>
+<td style="text-align: left; vertical-align: top;">kept [kɛpt]</td>
+<td style="text-align: left; vertical-align: top;">держать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">kneel [ni:l]</td>
+<td style="text-align: left; vertical-align: top;">knelt [nɛlt]</td>
+<td style="text-align: left; vertical-align: top;">knelt [nɛlt]</td>
+<td style="text-align: left; vertical-align: top;">становиться на колени</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">knit [nɪt]</td>
+<td style="text-align: left; vertical-align: top;">knit [nɪt]</td>
+<td style="text-align: left; vertical-align: top;">knit [nɪt]</td>
+<td style="text-align: left; vertical-align: top;">вязать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">know [noʊ]</td>
+<td style="text-align: left; vertical-align: top;">knew [nju:]</td>
+<td style="text-align: left; vertical-align: top;">known [noʊn]</td>
+<td style="text-align: left; vertical-align: top;">знать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lay [leɪ]</td>
+<td style="text-align: left; vertical-align: top;">laid [leɪd]</td>
+<td style="text-align: left; vertical-align: top;">laid [leɪd]</td>
+<td style="text-align: left; vertical-align: top;">класть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lead [li:d]</td>
+<td style="text-align: left; vertical-align: top;">led [lɛd]</td>
+<td style="text-align: left; vertical-align: top;">led [lɛd]</td>
+<td style="text-align: left; vertical-align: top;">вести</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lean [li:n]</td>
+<td style="text-align: left; vertical-align: top;">leant [lɛnt]</td>
+<td style="text-align: left; vertical-align: top;">leant [lɛnt]</td>
+<td style="text-align: left; vertical-align: top;">опираться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">leap [li:p]</td>
+<td style="text-align: left; vertical-align: top;">leapt [lɛpt]</td>
+<td style="text-align: left; vertical-align: top;">leapt [lɛpt]</td>
+<td style="text-align: left; vertical-align: top;">прыгать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">learn [lɜ:n]</td>
+<td style="text-align: left; vertical-align: top;">learned/learnt<br />
+[lɜ:nd/lɜ:nt]</td>
+<td style="text-align: left; vertical-align: top;">learnt [lɜ:nt]</td>
+<td style="text-align: left; vertical-align: top;">учить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">leave [li:v]</td>
+<td style="text-align: left; vertical-align: top;">left [lɛft]</td>
+<td style="text-align: left; vertical-align: top;">left [lɛft]</td>
+<td style="text-align: left; vertical-align: top;">оставлять, уезжать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lend [lɛnd]</td>
+<td style="text-align: left; vertical-align: top;">lent [lɛnt]</td>
+<td style="text-align: left; vertical-align: top;">lent [lɛnt]</td>
+<td style="text-align: left; vertical-align: top;">давать взаймы</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">let [lɛt]</td>
+<td style="text-align: left; vertical-align: top;">let [lɛt]</td>
+<td style="text-align: left; vertical-align: top;">let [lɛt]</td>
+<td style="text-align: left; vertical-align: top;">позволять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lie [laɪ]</td>
+<td style="text-align: left; vertical-align: top;">lay [leɪ]</td>
+<td style="text-align: left; vertical-align: top;">lain [leɪn]</td>
+<td style="text-align: left; vertical-align: top;">лежать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lie [laɪ]
+(правильный глагол)</td>
+<td style="text-align: left; vertical-align: top;">lied [laɪd]</td>
+<td style="text-align: left; vertical-align: top;">lied [laɪd]</td>
+<td style="text-align: left; vertical-align: top;">лгать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">light [laɪt]</td>
+<td style="text-align: left; vertical-align: top;">lit/lighted<br />
+[lɪt/laɪtɪd]</td>
+<td style="text-align: left; vertical-align: top;">lit/lighted<br />
+[lɪt/laɪtɪd]</td>
+<td style="text-align: left; vertical-align: top;">зажигать, освещать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">lose [lu:z]</td>
+<td style="text-align: left; vertical-align: top;">lost [lɒst]</td>
+<td style="text-align: left; vertical-align: top;">lost [lɒst]</td>
+<td style="text-align: left; vertical-align: top;">терять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">make [meɪk]</td>
+<td style="text-align: left; vertical-align: top;">made [meɪd]</td>
+<td style="text-align: left; vertical-align: top;">made [meɪd]</td>
+<td style="text-align: left; vertical-align: top;">делать, создавать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">mean [mi:n]</td>
+<td style="text-align: left; vertical-align: top;">meant [mɛnt]</td>
+<td style="text-align: left; vertical-align: top;">meant [mɛnt]</td>
+<td style="text-align: left; vertical-align: top;">означать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">meet [mi:t]</td>
+<td style="text-align: left; vertical-align: top;">met [mɛt]</td>
+<td style="text-align: left; vertical-align: top;">met [mɛt]</td>
+<td style="text-align: left; vertical-align: top;">встретить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">mistake [mɪisˈteɪk]</td>
+<td style="text-align: left; vertical-align: top;">mistook [mɪˈstʊk]</td>
+<td style="text-align: left; vertical-align: top;">mistaken [mɪˈsteɪk(ə)n]</td>
+<td style="text-align: left; vertical-align: top;">ошибаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">mow [moʊ]</td>
+<td style="text-align: left; vertical-align: top;">mowed [moʊd]</td>
+<td style="text-align: left; vertical-align: top;">mown [moʊn]</td>
+<td style="text-align: left; vertical-align: top;">косить (траву)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">overcome [əʊvəˈkʌm]</td>
+<td style="text-align: left; vertical-align: top;">overcame [əʊvəˈkeɪm]</td>
+<td style="text-align: left; vertical-align: top;">overcome [əʊvəˈkʌm]</td>
+<td style="text-align: left; vertical-align: top;">преодолевать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">pay [peɪ]</td>
+<td style="text-align: left; vertical-align: top;">paid [peɪd]</td>
+<td style="text-align: left; vertical-align: top;">paid [peɪd]</td>
+<td style="text-align: left; vertical-align: top;">платить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">plead [pli:d]</td>
+<td style="text-align: left; vertical-align: top;">pleaded/pled<br />
+[pli:dɪd/plɛd]</td>
+<td style="text-align: left; vertical-align: top;">pleaded/pled<br />
+[pli:dɪd/plɛd]</td>
+<td style="text-align: left; vertical-align: top;">заявлять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">prove [pru:v]</td>
+<td style="text-align: left; vertical-align: top;">proved [pru:vd]</td>
+<td style="text-align: left; vertical-align: top;">proven/proved<br />
+[pru:vən/pru:vd]</td>
+<td style="text-align: left; vertical-align: top;">доказывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">put [pʊt]</td>
+<td style="text-align: left; vertical-align: top;">put [pʊt]</td>
+<td style="text-align: left; vertical-align: top;">put [pʊt]</td>
+<td style="text-align: left; vertical-align: top;">класть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">read [ri:d]</td>
+<td style="text-align: left; vertical-align: top;">read [rɛd]</td>
+<td style="text-align: left; vertical-align: top;">read [rɛd]</td>
+<td style="text-align: left; vertical-align: top;">читать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">relay [riːˈleɪ]</td>
+<td style="text-align: left; vertical-align: top;">relaid [riːˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">relaid [riːˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">перекладывать (плитку и т.п.)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">relay [rɪˈleɪ]
+(правильный глагол)</td>
+<td style="text-align: left; vertical-align: top;">relayed [rɪˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">relayed [rɪˈleɪd]</td>
+<td style="text-align: left; vertical-align: top;">передавать (сигнал и т.п.)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">rid [rɪd]</td>
+<td style="text-align: left; vertical-align: top;">rid [rɪd]</td>
+<td style="text-align: left; vertical-align: top;">rid [rɪd]</td>
+<td style="text-align: left; vertical-align: top;">избавлять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">ride [raɪd]</td>
+<td style="text-align: left; vertical-align: top;">rode [roʊd]</td>
+<td style="text-align: left; vertical-align: top;">ridden [rɪdn]</td>
+<td style="text-align: left; vertical-align: top;">ездить верхом</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">ring [rɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">rang [ræŋ]</td>
+<td style="text-align: left; vertical-align: top;">rung [rʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">звонить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">rise [raɪz]</td>
+<td style="text-align: left; vertical-align: top;">rose [roʊz]</td>
+<td style="text-align: left; vertical-align: top;">risen [rɪzn]</td>
+<td style="text-align: left; vertical-align: top;">подниматься</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">run [rʌn]</td>
+<td style="text-align: left; vertical-align: top;">ran [ræn]</td>
+<td style="text-align: left; vertical-align: top;">run [rʌn]</td>
+<td style="text-align: left; vertical-align: top;">бежать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">saw [sɔ:]</td>
+<td style="text-align: left; vertical-align: top;">sawed [sɔ:d]</td>
+<td style="text-align: left; vertical-align: top;">sawed/sawn [sɔ:d/sɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">пилить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">say [sɛɪ]</td>
+<td style="text-align: left; vertical-align: top;">said [sɛd]</td>
+<td style="text-align: left; vertical-align: top;">said [sɛd]</td>
+<td style="text-align: left; vertical-align: top;">сказать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">see [si:]</td>
+<td style="text-align: left; vertical-align: top;">saw [sɔ:]</td>
+<td style="text-align: left; vertical-align: top;">seen [si:n]</td>
+<td style="text-align: left; vertical-align: top;">видеть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">seek [si:k]</td>
+<td style="text-align: left; vertical-align: top;">sought [sɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">sought [sɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">искать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sell [sel]</td>
+<td style="text-align: left; vertical-align: top;">sold [soʊld]</td>
+<td style="text-align: left; vertical-align: top;">sold [soʊld]</td>
+<td style="text-align: left; vertical-align: top;">продавать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">send [sɛnd]</td>
+<td style="text-align: left; vertical-align: top;">sent [sɛnt]</td>
+<td style="text-align: left; vertical-align: top;">sent [sɛnt]</td>
+<td style="text-align: left; vertical-align: top;">посылать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">set [sɛt]</td>
+<td style="text-align: left; vertical-align: top;">set [sɛt]</td>
+<td style="text-align: left; vertical-align: top;">set [sɛt]</td>
+<td style="text-align: left; vertical-align: top;">ставить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sew [səʊ]</td>
+<td style="text-align: left; vertical-align: top;">sewed [səʊd]</td>
+<td style="text-align: left; vertical-align: top;">sewn [səʊn]</td>
+<td style="text-align: left; vertical-align: top;">шить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shake [ʃeɪk]</td>
+<td style="text-align: left; vertical-align: top;">shook [ʃʊk]</td>
+<td style="text-align: left; vertical-align: top;">shaken [ʃeɪkən]</td>
+<td style="text-align: left; vertical-align: top;">трясти</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shave [ʃeɪv]</td>
+<td style="text-align: left; vertical-align: top;">shaved [ʃeɪvd]</td>
+<td style="text-align: left; vertical-align: top;">shaved/shaven<br />
+[ʃeɪvd/ʃeɪvən]</td>
+<td style="text-align: left; vertical-align: top;">брить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shear [ʃɪə]</td>
+<td style="text-align: left; vertical-align: top;">sheared [ʃɪəd]</td>
+<td style="text-align: left; vertical-align: top;">sheared/shorn<br />
+[ʃɪəd/ʃɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">стричь</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shed [ʃed]</td>
+<td style="text-align: left; vertical-align: top;">shed [ʃɛd]</td>
+<td style="text-align: left; vertical-align: top;">shed [ʃɛd]</td>
+<td style="text-align: left; vertical-align: top;">проливать (слёзы)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shine [ʃaɪn]</td>
+<td style="text-align: left; vertical-align: top;">shone [ʃoʊn]</td>
+<td style="text-align: left; vertical-align: top;">shone [ʃoʊn]</td>
+<td style="text-align: left; vertical-align: top;">светить, сиять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shit [ʃit]</td>
+<td style="text-align: left; vertical-align: top;">shit [ʃit]</td>
+<td style="text-align: left; vertical-align: top;">shit [ʃit]</td>
+<td style="text-align: left; vertical-align: top;">гадить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shoe [ʃu:]</td>
+<td style="text-align: left; vertical-align: top;">shod [ʃɒd]</td>
+<td style="text-align: left; vertical-align: top;">shod [ʃɒd]</td>
+<td style="text-align: left; vertical-align: top;">обувать, подковывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shoot [ʃu:t]</td>
+<td style="text-align: left; vertical-align: top;">shot [ʃɒt]</td>
+<td style="text-align: left; vertical-align: top;">shot [ʃɒt]</td>
+<td style="text-align: left; vertical-align: top;">стрелять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">show [ʃoʊ]</td>
+<td style="text-align: left; vertical-align: top;">showed [ʃoʊd]</td>
+<td style="text-align: left; vertical-align: top;">shown [ʃoʊn]</td>
+<td style="text-align: left; vertical-align: top;">показывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shrink [ʃrɪŋk]</td>
+<td style="text-align: left; vertical-align: top;">shrank [ʃræŋk]</td>
+<td style="text-align: left; vertical-align: top;">shrunk [ʃrʌŋk]</td>
+<td style="text-align: left; vertical-align: top;">сжиматься</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">shut [ʃʌt]</td>
+<td style="text-align: left; vertical-align: top;">shut [ʃʌt]</td>
+<td style="text-align: left; vertical-align: top;">shut [ʃʌt]</td>
+<td style="text-align: left; vertical-align: top;">закрывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sing [sɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">sang [sæŋ]</td>
+<td style="text-align: left; vertical-align: top;">sung [sʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">петь</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sink [sɪŋk]</td>
+<td style="text-align: left; vertical-align: top;">sank [sæŋk]</td>
+<td style="text-align: left; vertical-align: top;">sunk [sʌŋk]</td>
+<td style="text-align: left; vertical-align: top;">погружаться, тонуть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sit [sɪt]</td>
+<td style="text-align: left; vertical-align: top;">sat [sæt]</td>
+<td style="text-align: left; vertical-align: top;">sat [sæt]</td>
+<td style="text-align: left; vertical-align: top;">сидеть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">slay [sleɪ]</td>
+<td style="text-align: left; vertical-align: top;">slew [slu:]</td>
+<td style="text-align: left; vertical-align: top;">slain [sleɪn]</td>
+<td style="text-align: left; vertical-align: top;">убивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">slay [sleɪ]
+(правильный глагол)</td>
+<td style="text-align: left; vertical-align: top;">slayed [sleɪd]</td>
+<td style="text-align: left; vertical-align: top;">slayed [sleɪd]</td>
+<td style="text-align: left; vertical-align: top;">восхищать, поражать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sleep [sli:p]</td>
+<td style="text-align: left; vertical-align: top;">slept [slɛpt]</td>
+<td style="text-align: left; vertical-align: top;">slept [slɛpt]</td>
+<td style="text-align: left; vertical-align: top;">спать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">slide [slaɪd]</td>
+<td style="text-align: left; vertical-align: top;">slid [slɪd]</td>
+<td style="text-align: left; vertical-align: top;">slid [slɪd]</td>
+<td style="text-align: left; vertical-align: top;">скользить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sling [slɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">slung [slʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">slung [slʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">1) швырять 2) подвешивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">slink [slɪŋk]</td>
+<td style="text-align: left; vertical-align: top;">slinked/slunk<br />
+[slɪŋkt/slʌŋk]</td>
+<td style="text-align: left; vertical-align: top;">slinked/slunk<br />
+[slɪŋkt/slʌŋk]</td>
+<td style="text-align: left; vertical-align: top;">красться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">slit [slɪt]</td>
+<td style="text-align: left; vertical-align: top;">slit [slɪt]</td>
+<td style="text-align: left; vertical-align: top;">slit [slɪt]</td>
+<td style="text-align: left; vertical-align: top;">разрезать (полосами), расщеплять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">smell [smel]</td>
+<td style="text-align: left; vertical-align: top;">smelt [smɛlt]</td>
+<td style="text-align: left; vertical-align: top;">smelt [smɛlt]</td>
+<td style="text-align: left; vertical-align: top;">пахнуть, нюхать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">smite [smʌɪt]</td>
+<td style="text-align: left; vertical-align: top;">smote [sməʊt]</td>
+<td style="text-align: left; vertical-align: top;">smitten [ˈsmɪtn]</td>
+<td style="text-align: left; vertical-align: top;">ударять, разбивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sow [soʊ]</td>
+<td style="text-align: left; vertical-align: top;">sowed [soʊd]</td>
+<td style="text-align: left; vertical-align: top;">sown [soʊn]</td>
+<td style="text-align: left; vertical-align: top;">сеять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">speak [spi:k]</td>
+<td style="text-align: left; vertical-align: top;">spoke [spoʊk]</td>
+<td style="text-align: left; vertical-align: top;">spoken [spoʊkən]</td>
+<td style="text-align: left; vertical-align: top;">разговаривать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">speed [spi:d]</td>
+<td style="text-align: left; vertical-align: top;">sped [spɛd]</td>
+<td style="text-align: left; vertical-align: top;">sped [spɛd]</td>
+<td style="text-align: left; vertical-align: top;">мчаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spell [spel]</td>
+<td style="text-align: left; vertical-align: top;">spelt [spɛlt]</td>
+<td style="text-align: left; vertical-align: top;">spelt [spɛlt]</td>
+<td style="text-align: left; vertical-align: top;">писать, читать по буквам</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spend [spend]</td>
+<td style="text-align: left; vertical-align: top;">spent [spɛnt]</td>
+<td style="text-align: left; vertical-align: top;">spent [spɛnt]</td>
+<td style="text-align: left; vertical-align: top;">тратить, проводить (время)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spill [spɪl]</td>
+<td style="text-align: left; vertical-align: top;">spilt [spɪlt]</td>
+<td style="text-align: left; vertical-align: top;">spilt [spɪlt]</td>
+<td style="text-align: left; vertical-align: top;">расплескать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spin [spɪn]</td>
+<td style="text-align: left; vertical-align: top;">spun [spʌn]</td>
+<td style="text-align: left; vertical-align: top;">spun [spʌn]</td>
+<td style="text-align: left; vertical-align: top;">прясть, вертеть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spit [spɪt]</td>
+<td style="text-align: left; vertical-align: top;">spit/spat<br />
+[spɪt/spæt]</td>
+<td style="text-align: left; vertical-align: top;">spit/spat<br />
+[spɪt/spæt]</td>
+<td style="text-align: left; vertical-align: top;">плевать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">split [splɪt]</td>
+<td style="text-align: left; vertical-align: top;">split [splɪt]</td>
+<td style="text-align: left; vertical-align: top;">split [splɪt]</td>
+<td style="text-align: left; vertical-align: top;">расщепить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spoil [spoɪl]</td>
+<td style="text-align: left; vertical-align: top;">spoiled/spoilt<br />
+[spoɪld/spoɪlt]</td>
+<td style="text-align: left; vertical-align: top;">spoiled/spoilt<br />
+[spoɪld/spoɪlt]</td>
+<td style="text-align: left; vertical-align: top;">портить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spread [spred]</td>
+<td style="text-align: left; vertical-align: top;">spread [sprɛd]</td>
+<td style="text-align: left; vertical-align: top;">spread [sprɛd]</td>
+<td style="text-align: left; vertical-align: top;">распространить(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">spring [sprɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">sprang [spræŋ]</td>
+<td style="text-align: left; vertical-align: top;">sprung [sprʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">возникать, выпрыгивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">stand [stænd]</td>
+<td style="text-align: left; vertical-align: top;">stood [stʊd]</td>
+<td style="text-align: left; vertical-align: top;">stood [stʊd]</td>
+<td style="text-align: left; vertical-align: top;">стоять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">steal [sti:l]</td>
+<td style="text-align: left; vertical-align: top;">stole [stoʊl]</td>
+<td style="text-align: left; vertical-align: top;">stolen [stoʊlən]</td>
+<td style="text-align: left; vertical-align: top;">красть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">stick [stɪk]</td>
+<td style="text-align: left; vertical-align: top;">stuck [stʌk]</td>
+<td style="text-align: left; vertical-align: top;">stuck [stʌk]</td>
+<td style="text-align: left; vertical-align: top;">1) втыкать 2) липнуть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sting [stɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">stung [stʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">stung [stʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">жалить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">stink [stɪŋk]</td>
+<td style="text-align: left; vertical-align: top;">stank [stræŋk]</td>
+<td style="text-align: left; vertical-align: top;">stunk [stʌŋk]</td>
+<td style="text-align: left; vertical-align: top;">вонять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">strew [struː]</td>
+<td style="text-align: left; vertical-align: top;">strewed [struːd]</td>
+<td style="text-align: left; vertical-align: top;">strewn [struːn]</td>
+<td style="text-align: left; vertical-align: top;">усеивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">stride [straɪd]</td>
+<td style="text-align: left; vertical-align: top;">strode [stroʊd]</td>
+<td style="text-align: left; vertical-align: top;">stridden [strɪdn]</td>
+<td style="text-align: left; vertical-align: top;">шагать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">strike [straɪk]</td>
+<td style="text-align: left; vertical-align: top;">struck [strʌk]</td>
+<td style="text-align: left; vertical-align: top;">struck/stricken<br />
+[strʌk/strɪkən]</td>
+<td style="text-align: left; vertical-align: top;">ударить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">string [strɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">strung [srtʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">strung [strʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">нанизать, натянуть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">strive [straɪv]</td>
+<td style="text-align: left; vertical-align: top;">strove/strived<br />
+[stroʊv/straɪvd]</td>
+<td style="text-align: left; vertical-align: top;">striven/strived<br />
+[strɪvən/straɪvd]</td>
+<td style="text-align: left; vertical-align: top;">стремиться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">swear [swɛə]</td>
+<td style="text-align: left; vertical-align: top;">swore [swɔ:]</td>
+<td style="text-align: left; vertical-align: top;">sworn [swɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">клясться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sweat [swet]</td>
+<td style="text-align: left; vertical-align: top;">sweat/sweated<br />
+[swɛt/[swɛtɪd]</td>
+<td style="text-align: left; vertical-align: top;">sweat/sweated<br />
+[swɛt/&#8217;swɛtɪd]</td>
+<td style="text-align: left; vertical-align: top;">потеть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">sweep [swi:p]</td>
+<td style="text-align: left; vertical-align: top;">swept [swɛpt]</td>
+<td style="text-align: left; vertical-align: top;">swept [swɛpt]</td>
+<td style="text-align: left; vertical-align: top;">мести</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">swell [swel]</td>
+<td style="text-align: left; vertical-align: top;">swelled [swɛld]</td>
+<td style="text-align: left; vertical-align: top;">swollen/swelled<br />
+[swoʊlən/swɛld]</td>
+<td style="text-align: left; vertical-align: top;">распухнуть, вздуться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">swim [swɪm]</td>
+<td style="text-align: left; vertical-align: top;">swam [swæm]</td>
+<td style="text-align: left; vertical-align: top;">swum [swʌm]</td>
+<td style="text-align: left; vertical-align: top;">плыть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">swing [swɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">swung [swʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">swung [swʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">раскачивать(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">take [teɪk]</td>
+<td style="text-align: left; vertical-align: top;">took [tʊk]</td>
+<td style="text-align: left; vertical-align: top;">taken [&#8216;teɪkən]</td>
+<td style="text-align: left; vertical-align: top;">брать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">teach [ti:tʃ]</td>
+<td style="text-align: left; vertical-align: top;">taught [tɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">taught [tɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">обучать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">tear [tɛə]</td>
+<td style="text-align: left; vertical-align: top;">tore [tɔ:]</td>
+<td style="text-align: left; vertical-align: top;">torn [tɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">рвать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">tell [tel]</td>
+<td style="text-align: left; vertical-align: top;">told [toʊld]</td>
+<td style="text-align: left; vertical-align: top;">told [toʊld]</td>
+<td style="text-align: left; vertical-align: top;">говорить, рассказывать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">think [θɪŋk]</td>
+<td style="text-align: left; vertical-align: top;">thought [θɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">thought [θɔ:t]</td>
+<td style="text-align: left; vertical-align: top;">думать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">throw [θroʊ]</td>
+<td style="text-align: left; vertical-align: top;">threw [θru:]</td>
+<td style="text-align: left; vertical-align: top;">thrown [θroʊn]</td>
+<td style="text-align: left; vertical-align: top;">бросать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">thrust [θrʌst]</td>
+<td style="text-align: left; vertical-align: top;">thrust [θrʌst]</td>
+<td style="text-align: left; vertical-align: top;">thrust [θrʌst]</td>
+<td style="text-align: left; vertical-align: top;">толкать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">tread [tred]</td>
+<td style="text-align: left; vertical-align: top;">trod [trɒd]</td>
+<td style="text-align: left; vertical-align: top;">trodden [trɒdn]</td>
+<td style="text-align: left; vertical-align: top;">ступать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">undergo<br />
+[ʌndəˈɡəʊ]</td>
+<td style="text-align: left; vertical-align: top;">underwent<br />
+[ʌndə&#8217;wɛnt]</td>
+<td style="text-align: left; vertical-align: top;">undergone<br />
+[ʌndə&#8217;ɡɒn]</td>
+<td style="text-align: left; vertical-align: top;">проходить, подвергаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">understand<br />
+[ʌndəˈstænd]</td>
+<td style="text-align: left; vertical-align: top;">understood<br />
+[ʌndəˈstʊd]</td>
+<td style="text-align: left; vertical-align: top;">understood<br />
+[ʌndəˈstʊd]</td>
+<td style="text-align: left; vertical-align: top;">понимать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">undertake<br />
+[ʌndəˈteɪk]</td>
+<td style="text-align: left; vertical-align: top;">undertook<br />
+ʌndəˈtʊk]</td>
+<td style="text-align: left; vertical-align: top;">undertaken<br />
+[ʌndəˈteɪk(ə)n]</td>
+<td style="text-align: left; vertical-align: top;">предпринимать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">undo [&#8216;ʌn&#8217;du:]</td>
+<td style="text-align: left; vertical-align: top;">undid [&#8216;ʌn&#8217;dɪd]</td>
+<td style="text-align: left; vertical-align: top;">undone [&#8216;ʌn&#8217;dʌn]</td>
+<td style="text-align: left; vertical-align: top;">уничтожать сделанное</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">upset [ʌp&#8217;set]</td>
+<td style="text-align: left; vertical-align: top;">upset [ʌp&#8217;set]</td>
+<td style="text-align: left; vertical-align: top;">upset [ʌp&#8217;set]</td>
+<td style="text-align: left; vertical-align: top;">опрокинуть</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wake [weɪk]</td>
+<td style="text-align: left; vertical-align: top;">woke/waked<br />
+[woʊk/weɪkt]</td>
+<td style="text-align: left; vertical-align: top;">woken/waked<br />
+[woʊkən/weɪkt]</td>
+<td style="text-align: left; vertical-align: top;">просыпаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wear [wɛə]</td>
+<td style="text-align: left; vertical-align: top;">wore [wɔ:]</td>
+<td style="text-align: left; vertical-align: top;">worn [wɔ:n]</td>
+<td style="text-align: left; vertical-align: top;">носить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">weave [wi:v]</td>
+<td style="text-align: left; vertical-align: top;">wove/weaved<br />
+[woʊv/wi:vd]</td>
+<td style="text-align: left; vertical-align: top;">woven/weaved<br />
+[woʊvən/wi:vd]</td>
+<td style="text-align: left; vertical-align: top;">ткать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wed [wed]</td>
+<td style="text-align: left; vertical-align: top;">wed/wedded<br />
+[wɛd/&#8217;wɛdɪd]</td>
+<td style="text-align: left; vertical-align: top;">wed/wedded<br />
+[wɛd/&#8217;wɛdɪd]</td>
+<td style="text-align: left; vertical-align: top;">вступать в брак</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">weep [wi:p]</td>
+<td style="text-align: left; vertical-align: top;">wept [wɛpt]</td>
+<td style="text-align: left; vertical-align: top;">wept [wɛpt]</td>
+<td style="text-align: left; vertical-align: top;">плакать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wet [wɛt]</td>
+<td style="text-align: left; vertical-align: top;">wet [wɛt]</td>
+<td style="text-align: left; vertical-align: top;">wet [wɛt]</td>
+<td style="text-align: left; vertical-align: top;">мочить</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">win [wɪn]</td>
+<td style="text-align: left; vertical-align: top;">won [wʌn]</td>
+<td style="text-align: left; vertical-align: top;">won [wʌn]</td>
+<td style="text-align: left; vertical-align: top;">выигрывать, побеждать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wind [waɪnd]</td>
+<td style="text-align: left; vertical-align: top;">wound [waʊnd]</td>
+<td style="text-align: left; vertical-align: top;">wound [waʊnd]</td>
+<td style="text-align: left; vertical-align: top;">виться(ся)</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">withdraw<br />
+[wɪðˈdrɔː]</td>
+<td style="text-align: left; vertical-align: top;">withdrew<br />
+[wɪð&#8217;druː]</td>
+<td style="text-align: left; vertical-align: top;">withdrawn<br />
+[wɪð&#8217;drɔːn]</td>
+<td style="text-align: left; vertical-align: top;">забирать, отзывать, отказываться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">withhold<br />
+[wɪðˈhəʊld]</td>
+<td style="text-align: left; vertical-align: top;">withheld<br />
+[wɪðˈhɛld]</td>
+<td style="text-align: left; vertical-align: top;">withheld<br />
+[wɪðˈhɛld]</td>
+<td style="text-align: left; vertical-align: top;">воздерживаться</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">withstand<br />
+[wɪðˈstand]</td>
+<td style="text-align: left; vertical-align: top;">withstood<br />
+[wɪðˈstʊd]</td>
+<td style="text-align: left; vertical-align: top;">withstood<br />
+[wɪðˈstʊd]</td>
+<td style="text-align: left; vertical-align: top;">противостоять</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">wring [rɪŋ]</td>
+<td style="text-align: left; vertical-align: top;">wrung [rʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">wrung [rʌŋ]</td>
+<td style="text-align: left; vertical-align: top;">выкручивать</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">write [raɪt]</td>
+<td style="text-align: left; vertical-align: top;">wrote [roʊt]</td>
+<td style="text-align: left; vertical-align: top;">written [rɪtn]</td>
+<td style="text-align: left; vertical-align: top;">писать</td>
+</tr>
+</tbody>
+</table>
+<!-- Поиск -->
+</body>
+
+
+</html>
